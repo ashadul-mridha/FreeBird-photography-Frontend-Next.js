@@ -1,0 +1,42 @@
+.homepagesliderWrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../public/images/Audio_Video.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.homepagesliderWrapper h2{
+    color: #ffffff;
+    font-size: 68px;
+    font-weight: 600;
+}
+.homepagesliderWrapper p{
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    word-spacing: 10px;
+}
+.homepageslider{
+    height: 100vh;
+}
+.arrownexticon{
+    background-color: rgba(0, 0, 0, 0.66);
+    padding: 10px 15px;
+}
+.arrownexticon i{
+    color: #ffffff;
+    font-size: 20px;
+}
+.arrownextprev{
+    background-color: rgba(0, 0, 0, 0.66);
+    padding: 10px 15px;
+}
+.arrownextprev i{
+    color: #ffffff;
+    font-size: 20px;
+}
+

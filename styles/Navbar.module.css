@@ -1,0 +1,81 @@
+.basicNavbar{
+    width: 80px;
+    height: 100vh;
+    overflow-y: hidden;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.bar{
+    font-size: 20px;
+}
+.email{
+    font-size: 20px;
+}
+
+/* hover logo  */
+.hoverNavbar{
+    width: 240px;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    left: -240px;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 999;
+    transition: 1s all;
+}
+.logo{
+    margin-top: 25px;
+}
+.closeBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+.closeBtn i{
+    color: #E65050;
+    font-size: 22px;
+}
+.hoverNavbar > nav > ul{
+    list-style: none;
+    padding: 0px;
+
+}
+.hoverNavbar > nav > ul li{
+    font-size: 17px;
+    color: #222222;
+    padding: 7px 0px;
+    text-align: center;
+}
+.socialLink > .socialIcon > ul{
+    list-style: none;
+    display: flex;
+}
+.socialLink > .socialIcon > ul li{
+    margin: 0px 5px;
+}
+.socialLink > .socialIcon > ul li:first-child{
+    margin-left: 0px;
+}
+
+.socialLink > .socialIcon > ul li i{
+    color: #222222;
+}
+
+.hoverNavbar > .copyWright > p > span{
+    color: rgba(209, 75, 75, 0.899);
+}
+.hoverNavbar.activeNav{
+    left: 0px !important;
+}

@@ -1,0 +1,24 @@
+.categoryWrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* height: 100vh; */
+    /* overflow-y: scroll; */
+}
+.category{
+    background-color: #e5dada8a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-image: url('../public/images/categorybg.jpg');
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.5;
+    height: 400px;
+    cursor: pointer;
+    transition-delay: 0.3ms;
+}
+.category:hover{
+    opacity: 1;
+}
