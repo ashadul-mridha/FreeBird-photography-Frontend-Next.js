@@ -23,7 +23,7 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const data = await fetch(`http://localhost:5000/api/homepage/all`);
+  const data = await fetch(`${process.env.API_ROUTE}/homepage/all`);
   const sliders = await data.json();
   return {
     props: { sliders }, // will be passed to the page component as props

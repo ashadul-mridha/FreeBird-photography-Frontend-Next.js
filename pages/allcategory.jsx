@@ -27,3 +27,4 @@ const allcategory = () => {
 };
 
 export default allcategory;
+

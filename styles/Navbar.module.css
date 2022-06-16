@@ -53,10 +53,13 @@
 
 }
 .hoverNavbar > nav > ul li{
+    padding: 7px 0px;
+}
+.hoverNavbar > nav > ul li a{
     font-size: 17px;
     color: #222222;
-    padding: 7px 0px;
     text-align: center;
+    text-decoration: none;
 }
 .socialLink > .socialIcon > ul{
     list-style: none;

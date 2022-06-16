@@ -1,4 +1,5 @@
 import React , {useState} from 'react';
+import Link from "next/link";
 import Image from "next/image";
 import styles from '../../styles/Navbar.module.css'
 import smallLogo from '../../public/images/logo-big.png';
@@ -43,11 +44,31 @@ const Navbar = () => {
           </div>
           <nav>
             <ul>
-              <li>Home</li>
-              <li>Album</li>
-              <li>Category</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/images">
+                  <a>Images</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/allcategory">
+                  <a>Category</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <a>About Us</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <a>Contact Us</a>
+                </Link>
+              </li>
             </ul>
           </nav>
           <div className={styles.socialLink}>
