@@ -4,11 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../public/images/Audio_Video.jpeg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .homepagesliderWrapper h2{
     color: #ffffff;
     font-size: 68px;

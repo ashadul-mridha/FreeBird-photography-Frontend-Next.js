@@ -1,8 +1,11 @@
+import React, { useState } from "react";
 import Head from 'next/head';
-import HomePage from './components/HomePage';
 import HomePageSlider from './components/HomePageSlider';
 
-export default function Home() {
+export default function Home(props) {
+
+  const [sliders, setSliders] = useState(props.sliders);
+
   return (
     <>
       <Head>
@@ -12,9 +15,17 @@ export default function Home() {
       </Head>
 
       <main>
-        <HomePageSlider />
+        <HomePageSlider sliders={sliders} />
       </main>
       
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  const data = await fetch(`http://localhost:5000/api/homepage/all`);
+  const sliders = await data.json();
+  return {
+    props: { sliders }, // will be passed to the page component as props
+  };
 }

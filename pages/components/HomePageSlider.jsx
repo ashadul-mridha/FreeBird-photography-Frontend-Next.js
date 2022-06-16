@@ -1,6 +1,7 @@
+import React, { useState } from "react";
 import Slider from "react-slick";
 import styles from "../../styles/HomepageSlider.module.css";
-import data from "../components/MOCK_DATA.json";
+import data from "./MOCK_DATA.json";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -35,7 +36,11 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function HomePageSlider() {
+const HomePageSlider= (props) => {
+  const [sliders, setSliders] = useState(props.sliders);
+
+  console.log("homepage sliders.js", sliders);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -71,11 +76,18 @@ export default function HomePageSlider() {
   return (
     <>
       <Slider {...settings}>
-        {data.map((slider, index) => (
+        {sliders?.data.map((slider, index) => (
           <div key={index}>
-            <div className={styles.homepagesliderWrapper}>
-              <h2>{slider.name}</h2>
-              <p className="my-4">{slider.desc}</p>
+            <div
+              style={{
+                backgroundImage: `url(
+                  http://localhost:5000/uploads/homepageimg/${slider.bgImg}
+                )`,
+              }}
+              className={styles.homepagesliderWrapper}
+            >
+              <h2>{slider.title}</h2>
+              <p className="my-4">{slider.subTitle}</p>
               <div>
                 <a className="btn-regular">View Project</a>
                 <a className="btn-optional ms-3">Contact Me</a>
@@ -87,3 +99,6 @@ export default function HomePageSlider() {
     </>
   );
 }
+
+
+export default HomePageSlider;
