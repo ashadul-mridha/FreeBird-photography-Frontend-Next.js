@@ -69,8 +69,8 @@ const Navbar = () => {
                 </Link>
               </li>
               <li onClick={closeMenu}>
-                <Link href="/about">
-                  <a>About Us</a>
+                <Link href="/about-me">
+                  <a>About Me</a>
                 </Link>
               </li>
               <li onClick={closeMenu}>

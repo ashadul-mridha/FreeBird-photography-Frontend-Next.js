@@ -24,6 +24,14 @@ p {
   font-family: "Anek Malayalam", sans-serif;
 }
 
+p::selection {
+  background-color: rgba(120, 255, 255, 0.682);
+}
+
+h2::selection {
+  background-color: rgba(120, 255, 255, 0.682);
+}
+
 /* default btn  */
 .btn-regular {
   padding: 10px 22px;

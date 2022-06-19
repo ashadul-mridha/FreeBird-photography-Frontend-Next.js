@@ -4,13 +4,6 @@ import styles from "../../styles/category.module.css";
 //next import
 import Image from "next/image";
 
-// const LightGallery = dynamic(() => import("lightgallery/react"), {
-//   ssr: false,
-// });
-// const lgZoom = dynamic(() => import("lightgallery/plugins/zoom"), {
-//   ssr: false,
-// });
-
 //light gallary css
 import "lightgallery/css/lg-fullscreen.css";
 import "lightgallery/css/lg-rotate.css";
@@ -42,10 +35,7 @@ const Category = ({ data }) => {
         <p>Image With Out Category</p>
       </div>
 
-      <LightGallery
-        mode="lg-fade"
-        plugins={[lgZoom, lgFullscreen, lgRotate]}
-      >
+      <LightGallery mode="lg-fade" plugins={[lgZoom, lgFullscreen, lgRotate]}>
         {categoryImg?.data.map((singleImg, index) => (
           <a
             key={index}
@@ -57,8 +47,10 @@ const Category = ({ data }) => {
             <Image
               alt="hello"
               src={`http://localhost:5000/uploads/singleimg/${singleImg?.image}`}
-              width={300}
-              height={300}
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="cover"
             />
             <div className={styles.imgContent}>
               <h6>{singleImg?.caption}</h6>

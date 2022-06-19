@@ -11,10 +11,13 @@ const ImageComponent = ({ data }) => {
       <Image
         alt="single image"
         src={`http://localhost:5000/uploads/singleimg/${data.image}`}
-        width={320}
-        height={270}
+        width="100%"
+        height="100%"
+        layout="responsive"
+        objectFit="cover"
         className="img-fluid"
       />
+
       <div className="imageoverlay d-flex justify-content-center align-items-center">
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
@@ -39,7 +42,7 @@ const ImageComponent = ({ data }) => {
           background-color: black;
           opacity: 1;
         }
-        .imageoverlay i{
+        .imageoverlay i {
           color: #ffffff;
         }
       `}</style>
