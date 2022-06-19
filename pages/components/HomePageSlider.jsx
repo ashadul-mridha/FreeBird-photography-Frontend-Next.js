@@ -57,9 +57,9 @@ const HomePageSlider= (props) => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
@@ -89,8 +89,8 @@ const HomePageSlider= (props) => {
               <h2>{slider.title}</h2>
               <p className="my-4">{slider.subTitle}</p>
               <div>
-                <a className="btn-regular">View Project</a>
-                <a className="btn-optional ms-3">Contact Me</a>
+                <a className="btn-regular">Contact Me</a>
+                {/* <a className="btn-optional ms-3">Contact Me</a> */}
               </div>
             </div>
           </div>

@@ -7,6 +7,10 @@ import bigLogo from "../../public/images/logo-big.png";
 
 const Navbar = () => {
     const [activeNav , setActiveNav] = useState(0);
+
+    const closeMenu = () => {
+       setActiveNav(0);
+    }
     return (
       <>
         <header
@@ -44,27 +48,32 @@ const Navbar = () => {
           </div>
           <nav>
             <ul>
-              <li>
+              <li onClick={closeMenu}>
                 <Link href="/">
                   <a>Home</a>
                 </Link>
               </li>
-              <li>
+              <li onClick={closeMenu}>
                 <Link href="/images">
                   <a>Images</a>
                 </Link>
               </li>
-              <li>
+              <li onClick={closeMenu}>
                 <Link href="/allcategory">
                   <a>Category</a>
                 </Link>
               </li>
-              <li>
+              <li onClick={closeMenu}>
+                <Link href="/allalbum">
+                  <a>Albums</a>
+                </Link>
+              </li>
+              <li onClick={closeMenu}>
                 <Link href="/about">
                   <a>About Us</a>
                 </Link>
               </li>
-              <li>
+              <li onClick={closeMenu}>
                 <Link href="/contact">
                   <a>Contact Us</a>
                 </Link>

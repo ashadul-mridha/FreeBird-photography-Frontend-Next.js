@@ -4,23 +4,28 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f1f1f1 !important;
 }
+
+/* import global font  */
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;500;700&family=Galada&display=swap");
 
 a {
   color: inherit;
   text-decoration: none;
 }
-p{
+p {
   margin: 0px;
   padding: 0px;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Anek Malayalam", sans-serif;
 }
 
 /* default btn  */
-.btn-regular{
+.btn-regular {
   padding: 10px 22px;
   color: #ffffff;
   background-color: #ea4e4e;
@@ -30,13 +35,13 @@ p{
   text-decoration: none;
   cursor: pointer;
 }
-.btn-regular:hover{
+.btn-regular:hover {
   color: #ffffff;
   background-color: #d23333;
   border-color: #d23333;
 }
 
-.btn-optional{
+.btn-optional {
   padding: 10px 22px;
   color: #ffffff;
   background-color: transparent;
@@ -46,37 +51,66 @@ p{
   text-decoration: none;
   cursor: pointer;
 }
-.btn-optional:hover{
+.btn-optional:hover {
   color: #000000;
   background-color: #ffffff;
 }
 
 /* home page slick slider  */
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   font-size: 15px !important;
   width: 50px !important;
   height: 35px !important;
   top: 90% !important;
   z-index: 1;
 }
-.slick-prev{
+.slick-prev {
   left: auto !important;
   right: 97px;
 }
-.slick-next{
+.slick-next {
   right: 40px !important;
 }
 
- .slick-prev:before, .slick-next:before  {
-  content: '' !important;
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
 }
 
 /* light gallary design edit */
 
-.lg-react-element{
+.lg-react-element {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   background-color: #f1f1f1;
   padding: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .lg-react-element {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  /* //For Projectors or Higher Resolution Screens (Full HD) */
+  .lg-react-element {
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+  }
+}
+@media only screen and (min-width: 2450px) {
+  /* //For Projectors or Higher Resolution Screens (Full HD) */
+  .lg-react-element {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  /* //For 4K Displays (Ultra HD) */
+  .lg-react-element {
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+  }
 }

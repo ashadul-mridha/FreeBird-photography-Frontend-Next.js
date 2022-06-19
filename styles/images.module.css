@@ -1,0 +1,14 @@
+/* .imgWrapper > .lg-react-element {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .imgWrapper > .lg-react-element {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+} */
