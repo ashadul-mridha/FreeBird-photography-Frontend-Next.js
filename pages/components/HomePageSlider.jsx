@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { useState } from "react";
 import Slider from "react-slick";
 import styles from "../../styles/HomepageSlider.module.css";
-import data from "./MOCK_DATA.json";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -36,10 +36,13 @@ function SamplePrevArrow(props) {
   );
 }
 
-const HomePageSlider= (props) => {
+const HomePageSlider = (props) => {
+  const router = useRouter();
   const [sliders, setSliders] = useState(props.sliders);
 
-  console.log("homepage sliders.js", sliders);
+  const gotoContact = () => {
+    router.push("/contact");
+  };
 
   const settings = {
     dots: false,
@@ -89,7 +92,9 @@ const HomePageSlider= (props) => {
               <h2>{slider.title}</h2>
               <p className="my-4">{slider.subTitle}</p>
               <div>
-                <a className="btn-regular">Contact Me</a>
+                <a onClick={gotoContact} className="btn-regular">
+                  Contact Me
+                </a>
                 {/* <a className="btn-optional ms-3">Contact Me</a> */}
               </div>
             </div>
@@ -98,7 +103,6 @@ const HomePageSlider= (props) => {
       </Slider>
     </>
   );
-}
-
+};
 
 export default HomePageSlider;

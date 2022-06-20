@@ -1,0 +1,50 @@
+.contactWrapper {
+  background-color: #ffffff;
+  padding: 60px 60px;
+}
+.contactWrapper p {
+  margin: 10px 15px;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  text-transform: lowercase;
+  color: #222;
+}
+
+.socialIcon {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 20px;
+}
+.socialIcon li {
+  margin-top: 10px;
+}
+.socialIcon li a {
+  margin: 8px 13px;
+  border: 2px solid #222;
+  border-radius: 50%;
+  padding: 12px 12px;
+  color: #222;
+  transition: 5ms ease-in-out all;
+}
+.socialIcon li a:hover {
+  color: #ffffff;
+  background-color: #222;
+}
+.socialIcon li a:first-child {
+  margin-left: 0px;
+}
+
+@media only screen and (max-width: 992px) {
+  .contactWrapper {
+    padding: 20px;
+  }
+  .contactWrapper p {
+    font-size: 13px;
+  }
+  .socialIcon li a {
+    padding: 8px;
+  }
+}
