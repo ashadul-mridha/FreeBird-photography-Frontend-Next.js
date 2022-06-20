@@ -26,10 +26,12 @@ p {
 
 p::selection {
   background-color: rgba(120, 255, 255, 0.682);
+  color: #ffffff;
 }
 
 h2::selection {
   background-color: rgba(120, 255, 255, 0.682);
+  color: #ffffff;
 }
 
 /* default btn  */

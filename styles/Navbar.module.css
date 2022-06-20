@@ -55,6 +55,9 @@
 .hoverNavbar > nav > ul li{
     padding: 7px 0px;
 }
+.hoverNavbar > nav > ul li.active > a{
+    color: #E65050 !important;
+}
 .hoverNavbar > nav > ul li a{
     font-size: 17px;
     color: #222222;
