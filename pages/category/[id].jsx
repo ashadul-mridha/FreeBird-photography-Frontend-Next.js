@@ -17,20 +17,18 @@ import lgFullscreen from "lightgallery/plugins/fullscreen";
 import lgRotate from "lightgallery/plugins/rotate";
 import lgZoom from "lightgallery/plugins/zoom";
 import LightGallery from "lightgallery/react";
+import Head from "next/head";
 
-const data = [
-  "https://images.unsplash.com/photo-1652608463893-ad70f51e97f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-  "https://images.unsplash.com/photo-1646370336237-31b23f41b695?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-  "https://images.unsplash.com/photo-1571139865702-d600ae6b49c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-  "https://images.unsplash.com/photo-1652434893021-f6e0f51c9ea4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-  "https://images.unsplash.com/photo-1652449765460-5281c610e175?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-];
 
 const Category = ({ data }) => {
   const [categoryImg, setCategoryImg] = useState(data);
   console.log(categoryImg);
   return (
     <>
+      <Head>
+        <title>Single Category</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className={styles.categoryHeader}>
         <h2>Outdoor</h2>
         <p>Image With Out Category</p>

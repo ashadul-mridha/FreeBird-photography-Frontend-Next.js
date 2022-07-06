@@ -16,6 +16,7 @@ import lgFullscreen from "lightgallery/plugins/fullscreen";
 import lgRotate from "lightgallery/plugins/rotate";
 import lgZoom from "lightgallery/plugins/zoom";
 import LightGallery from "lightgallery/react";
+import Head from "next/head";
 
 const SingleAlbum = ({ data, AlbumData }) => {
   const [albums, setAlbums] = useState(data.data);
@@ -23,6 +24,10 @@ const SingleAlbum = ({ data, AlbumData }) => {
 
   return (
     <div className={styles.singlegallaryWrapper}>
+      <Head>
+        <title>Single Album</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">

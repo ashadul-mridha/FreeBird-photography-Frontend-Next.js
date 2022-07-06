@@ -1,9 +1,17 @@
+import Head from 'next/head';
 import React from 'react';
 import styles from '../styles/contact.module.css';
 
 const Contact = () => {
     return (
       <>
+        <Head>
+          <title>Contact Us</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <div className="container">
           <div className="row justify-content-center align-items-center vh-100 bg-light">
             <div className="col-md-8">

@@ -10,6 +10,7 @@ import lgFullscreen from "lightgallery/plugins/fullscreen";
 import lgRotate from "lightgallery/plugins/rotate";
 import lgZoom from "lightgallery/plugins/zoom";
 import LightGallery from "lightgallery/react";
+import Head from "next/head";
 import { useState } from "react";
 import ImageComponent from "../components/ImageComponent";
 import styles from "../styles/images.module.css";
@@ -18,6 +19,10 @@ const Images = ({ data }) => {
   const [images, setImages] = useState(data.data);
   return (
     <div className={styles.imgWrapper}>
+      <Head>
+        <title>Images</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <LightGallery mode="lg-fade" plugins={[lgZoom, lgFullscreen, lgRotate]}>
         {images?.map((image, index) => (
           <ImageComponent data={image} key={index} />

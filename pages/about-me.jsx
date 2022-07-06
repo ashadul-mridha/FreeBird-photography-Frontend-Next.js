@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -14,6 +15,13 @@ const AboutMe = ({ data }) => {
   return (
     <>
       <div className="container-fluid vh-100 aboutMeWrapper">
+        <Head>
+          <title>About me</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <div className="row">
           <div className="col-md-6 col-12 col-sm-12">
             {/* <Image
