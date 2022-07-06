@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import styles from '../../styles/category.module.css';
+import { useState } from "react";
+import styles from "../../styles/category.module.css";
 
 //next import
-import Head from "next/head";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
-import LightGallery from "lightgallery/react";
 import lgZoom from "lightgallery/plugins/zoom";
+import LightGallery from "lightgallery/react";
 
 // const LightGallery = dynamic(() => import("lightgallery/react"), {
 //   ssr: false,
@@ -17,12 +15,11 @@ import lgZoom from "lightgallery/plugins/zoom";
 // });
 
 //light gallary css
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-zoom.css";
-import "lightgallery/css/lg-thumbnail.css"; 
 import "lightgallery/css/lg-fullscreen.css";
 import "lightgallery/css/lg-rotate.css";
-
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lightgallery.css";
 
 //lightgallary plugin
 // import lgZoom from "lightgallery/plugins/zoom";
@@ -38,8 +35,8 @@ const data = [
   "https://images.unsplash.com/photo-1652449765460-5281c610e175?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
 ];
 
-const Category = ({category}) => {
-  const [categoryImg , setCategoryImg] = useState(category.data)
+const Category = ({ category }) => {
+  const [categoryImg, setCategoryImg] = useState(category.data);
   console.log(categoryImg);
   return (
     <>
@@ -59,7 +56,7 @@ const Category = ({category}) => {
           >
             {/* <Image
               alt="hello"
-              src={`http://localhost:5000/uploads/singleimg/${singleImg?.image}`}
+              src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${singleImg?.image}`}
               width={300}
               height={300}
             /> */}
@@ -76,10 +73,9 @@ const Category = ({category}) => {
 
 export default Category;
 
-
 export async function getServerSideProps(context) {
   const data = await fetch(
-    `http://localhost:5000/api/image/category/6282278deaa84a1eee941f80`
+    `${process.env.API_ROUTE}/image/category/6282278deaa84a1eee941f80`
   );
   const category = await data.json();
   return {

@@ -9,7 +9,7 @@ import "swiper/css/zoom";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import styles from '../../styles/Home.module.css'
+import styles from '../styles/Home.module.css'
 
 // import required modules
 import { Zoom, Navigation, Pagination } from "swiper";;

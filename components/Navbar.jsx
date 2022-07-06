@@ -5,8 +5,8 @@ import { useState } from "react";
 import {
   default as bigLogo,
   default as smallLogo,
-} from "../../public/images/logo-big.png";
-import styles from "../../styles/Navbar.module.css";
+} from "../public/images/logo-big.png";
+import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState(0);

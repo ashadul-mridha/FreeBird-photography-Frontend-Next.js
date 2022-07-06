@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Slider from "react-slick";
-import styles from "../../styles/HomepageSlider.module.css";
+import styles from "../styles/HomepageSlider.module.css";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -84,7 +84,7 @@ const HomePageSlider = (props) => {
             <div
               style={{
                 backgroundImage: `url(
-                  http://localhost:5000/uploads/homepageimg/${slider.bgImg}
+                  https://fathomless-eyrie-49884.herokuapp.com/uploads/homepageimg/${slider.bgImg}
                 )`,
               }}
               className={styles.homepagesliderWrapper}

@@ -11,7 +11,7 @@ import lgRotate from "lightgallery/plugins/rotate";
 import lgZoom from "lightgallery/plugins/zoom";
 import LightGallery from "lightgallery/react";
 import { useState } from "react";
-import ImageComponent from "./components/ImageComponent";
+import ImageComponent from "../components/ImageComponent";
 import styles from "../styles/images.module.css";
 
 const Images = ({ data }) => {
@@ -49,7 +49,7 @@ const Images = ({ data }) => {
 export default Images;
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`http://localhost:5000/api/image/all`);
+  const res = await fetch(`${process.env.API_ROUTE}/image/all`);
   const data = await res.json();
 
   return {

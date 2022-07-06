@@ -41,12 +41,12 @@ const Category = ({ data }) => {
             key={index}
             data-lg-size="1406-1390"
             className={styles.imageWrapper}
-            data-src={`http://localhost:5000/uploads/singleimg/${singleImg?.image}`}
+            data-src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${singleImg?.image}`}
             data-sub-html={`<h4>Photo Capton - <a href="#" > ${singleImg?.caption} </a></h4> <p> Category - <a href="#">${singleImg?.cat_id?.name}</a></p>`}
           >
             <Image
               alt="hello"
-              src={`http://localhost:5000/uploads/singleimg/${singleImg?.image}`}
+              src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${singleImg?.image}`}
               width="100%"
               height="100%"
               layout="responsive"
@@ -67,7 +67,7 @@ export default Category;
 export async function getServerSideProps(context) {
   const { id } = context.params;
 
-  const res = await fetch(`http://localhost:5000/api/image/category/${id}`);
+  const res = await fetch(`${process.env.API_ROUTE}/image/category/${id}`);
   const data = await res.json();
 
   return {

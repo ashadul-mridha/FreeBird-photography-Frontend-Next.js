@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Head from 'next/head';
-import HomePageSlider from './components/HomePageSlider';
+import HomePageSlider from '../components/HomePageSlider';
 
 export default function Home(props) {
 

@@ -14,7 +14,7 @@ const AboutMe = ({ data }) => {
           <div className="col-md-6 col-12 col-sm-12">
             <Image
               alt="about us photography image"
-              src={`http://localhost:5000/uploads/aboutmeimg/${showData.image}`}
+              src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/aboutmeimg/${showData.image}`}
               height="100%"
               width="100%"
               layout="responsive"
@@ -132,7 +132,7 @@ const AboutMe = ({ data }) => {
 export default AboutMe;
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`http://localhost:5000/api/aboutme/all`);
+  const res = await fetch(`${process.env.API_ROUTE}/aboutme/all`);
   const data = await res.json();
 
   return {

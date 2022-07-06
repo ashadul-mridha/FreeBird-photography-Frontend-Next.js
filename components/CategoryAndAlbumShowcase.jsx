@@ -1,15 +1,17 @@
-import React, { useState } from "react";
-import styles from "./../../styles/catAndAlbumShowcase.module.css";
 import { useRouter } from "next/router";
+import styles from "../styles/catAndAlbumShowcase.module.css";
 
 const CategoryAndAlbumShowcase = ({ data, imgurl }) => {
   const router = useRouter();
 
   const gotoCategory = (id) => {
-    if (imgurl === `http://localhost:5000/uploads/categoryimg`) {
-        router.push(`/category/${id}`);
-    } else{
-        router.push(`/album/${id}`);
+    if (
+      imgurl ===
+      `https://fathomless-eyrie-49884.herokuapp.com/uploads/categoryimg`
+    ) {
+      router.push(`/category/${id}`);
+    } else {
+      router.push(`/album/${id}`);
     }
   };
   // console.log(category);

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import styles from "../../styles/singleAlbum.module.css";
-import ImageComponent from "../components/ImageComponent";
+import ImageComponent from "../../components/ImageComponent";
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 //light gallary css
@@ -54,10 +54,10 @@ export default SingleAlbum;
 export async function getServerSideProps(context) {
   const { id } = context.params;
 
-  const res = await fetch(`http://localhost:5000/api/image/album/${id}`);
+  const res = await fetch(`${process.env.API_ROUTE}/image/album/${id}`);
   const data = await res.json();
 
-  const albumRes = await fetch(`http://localhost:5000/api/album/${id}`);
+  const albumRes = await fetch(`${process.env.API_ROUTE}/album/${id}`);
   const AlbumData = await albumRes.json();
 
   return {

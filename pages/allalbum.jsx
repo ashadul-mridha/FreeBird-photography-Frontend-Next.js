@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import CategoryAndAlbumShowcase from "./components/CategoryAndAlbumShowcase";
+import { useState } from "react";
+import CategoryAndAlbumShowcase from "../components/CategoryAndAlbumShowcase";
 
 const AllAlbum = (props) => {
   const [albums, setAlbums] = useState(props.data);
@@ -9,7 +9,7 @@ const AllAlbum = (props) => {
     <>
       <CategoryAndAlbumShowcase
         data={albums}
-        imgurl={`http://localhost:5000/uploads/albumimg`}
+        imgurl={`https://fathomless-eyrie-49884.herokuapp.com/uploads/albumimg`}
       />
     </>
   );
