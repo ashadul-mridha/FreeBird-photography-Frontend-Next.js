@@ -57,7 +57,7 @@ const Category = ({ data }) => {
               alt="hello"
               src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${singleImg?.image}`}
               width="100%"
-              height="100%"
+              height="300px"
               objectFit="cover"
             />
             <div className={styles.imgContent}>

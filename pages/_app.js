@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Layout from '../components/Layout';
 import '../styles/globals.css';
+import { Loading } from "../components/Loading";
 
 function MyApp({ Component, pageProps }) {
     const [loading, setLoading] = React.useState(false);
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }) {
     <>
     {
       loading ? (
-        <h1>Loading</h1>
+        <Loading />
       ) : (
         <Layout>
       <Component {...pageProps} />

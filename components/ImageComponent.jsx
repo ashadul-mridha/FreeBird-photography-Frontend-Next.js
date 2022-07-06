@@ -22,9 +22,8 @@ const ImageComponent = ({ data }) => {
         alt="single image"
         src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data.image}`}
         width="100%"
-        height="100%"
+        height="300px"
         objectFit="cover"
-        className="img-fluid"
       />
 
       <div className="imageoverlay d-flex justify-content-center align-items-center">
