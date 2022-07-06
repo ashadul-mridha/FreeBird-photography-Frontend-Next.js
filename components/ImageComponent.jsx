@@ -5,7 +5,7 @@ const ImageComponent = ({ data }) => {
     <a
       data-lg-size="1406-1390"
       className={"imageWrapper"}
-      data-src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data?.image}`}
+      data-src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data.image}`}
       data-sub-html={`<h4>Photo Capton - <a href="#" > ${data?.caption} </a></h4> <p> Category - <a href="#">${data?.cat_id?.name}</a></p>`}
     >
       <Image
