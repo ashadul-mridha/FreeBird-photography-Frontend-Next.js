@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 
 const ImageComponent = ({ data }) => {
@@ -8,17 +9,23 @@ const ImageComponent = ({ data }) => {
       data-src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data.image}`}
       data-sub-html={`<h4>Photo Capton - <a href="#" > ${data?.caption} </a></h4> <p> Category - <a href="#">${data?.cat_id?.name}</a></p>`}
     >
-      {`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data.image}` && (
-        <Image
-          alt="single image"
-          src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data.image}`}
-          width="100%"
-          height="100%"
-          layout="responsive"
-          objectFit="cover"
-          className="img-fluid"
-        />
-      )}
+      {/* <Image
+        alt="single image"
+        src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data.image}`}
+        width="100%"
+        height="100%"
+        layout="responsive"
+        objectFit="cover"
+        className="img-fluid"
+      /> */}
+      <img
+        alt="single image"
+        src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data.image}`}
+        width="100%"
+        height="100%"
+        objectFit="cover"
+        className="img-fluid"
+      />
 
       <div className="imageoverlay d-flex justify-content-center align-items-center">
         <i className="fa-solid fa-magnifying-glass"></i>

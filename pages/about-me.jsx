@@ -16,15 +16,21 @@ const AboutMe = ({ data }) => {
       <div className="container-fluid vh-100 aboutMeWrapper">
         <div className="row">
           <div className="col-md-6 col-12 col-sm-12">
-            {`https://fathomless-eyrie-49884.herokuapp.com/uploads/aboutmeimg/${showData.image}` && (
-              <img
-                alt="about us photography image"
-                src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/aboutmeimg/${showData.image}`}
-                height="100%"
-                width="100%"
-                objectFit="cover"
-              />
-            )}
+            {/* <Image
+              alt="about us photography image"
+              src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/aboutmeimg/${showData.image}`}
+              height="100%"
+              width="100%"
+              layout="responsive"
+              objectFit="cover"
+            /> */}
+            <img
+              alt="about us photography image"
+              src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/aboutmeimg/${showData.image}`}
+              height="100%"
+              width="100%"
+              objectFit="cover"
+            />
           </div>
           <div className="col-md-6 col-12 col-sm-12">
             <div className="aboutInfoWrapper">

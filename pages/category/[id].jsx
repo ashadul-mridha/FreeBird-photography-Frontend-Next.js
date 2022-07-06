@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import styles from "../../styles/category.module.css";
 
@@ -44,12 +45,19 @@ const Category = ({ data }) => {
             data-src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${singleImg?.image}`}
             data-sub-html={`<h4>Photo Capton - <a href="#" > ${singleImg?.caption} </a></h4> <p> Category - <a href="#">${singleImg?.cat_id?.name}</a></p>`}
           >
-            <Image
+            {/* <Image
               alt="hello"
               src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${singleImg?.image}`}
               width="100%"
               height="100%"
               layout="responsive"
+              objectFit="cover"
+            /> */}
+            <img
+              alt="hello"
+              src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${singleImg?.image}`}
+              width="100%"
+              height="100%"
               objectFit="cover"
             />
             <div className={styles.imgContent}>
