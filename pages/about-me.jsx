@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -6,19 +7,21 @@ const AboutMe = ({ data }) => {
   const [aboutMe, setAboutMe] = useState(data.data);
 
   const showData = aboutMe[aboutMe.length - 1];
-  console.log(showData);
+
+  console.log(
+    `https://fathomless-eyrie-49884.herokuapp.com/uploads/aboutmeimg/${showData.image}`
+  );
   return (
     <>
       <div className="container-fluid vh-100 aboutMeWrapper">
         <div className="row">
           <div className="col-md-6 col-12 col-sm-12">
             {`https://fathomless-eyrie-49884.herokuapp.com/uploads/aboutmeimg/${showData.image}` && (
-              <Image
+              <img
                 alt="about us photography image"
                 src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/aboutmeimg/${showData.image}`}
                 height="100%"
                 width="100%"
-                layout="responsive"
                 objectFit="cover"
               />
             )}
