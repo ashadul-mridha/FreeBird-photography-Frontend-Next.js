@@ -44,6 +44,12 @@ const Images = ({ data }) => {
                 grid-gap: 5px;
               }
             }
+
+            @media only screen and (max-width: 600px) {
+              .lg-react-element {
+                grid-template-columns: repeat(1, 1fr);
+              }
+            }
           `}
         </style>
       </LightGallery>

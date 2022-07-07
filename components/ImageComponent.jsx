@@ -20,10 +20,8 @@ const ImageComponent = ({ data }) => {
       /> */}
       <img
         alt="single image"
+        className="img-ashy"
         src={`https://fathomless-eyrie-49884.herokuapp.com/uploads/singleimg/${data.image}`}
-        width="100%"
-        height="300px"
-        objectFit="cover"
       />
 
       <div className="imageoverlay d-flex justify-content-center align-items-center">
@@ -35,6 +33,11 @@ const ImageComponent = ({ data }) => {
           background-color: #ffffff;
           cursor: pointer;
           position: relative;
+        }
+        .img-ashy {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
         }
         .imageoverlay {
           position: absolute;
@@ -52,6 +55,11 @@ const ImageComponent = ({ data }) => {
         }
         .imageoverlay i {
           color: #ffffff;
+        }
+        @media only screen and (max-width: 600px) {
+          .img-ashy {
+            height: 250px;
+          }
         }
       `}</style>
     </a>
